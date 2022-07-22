@@ -8,8 +8,9 @@ def number(num):
 
     thousand = 1000
 
+
     if num == 0:
-        return f[ask]
+        return f[num]
     elif num < 20:
         return f[num]
     elif num < 100:
@@ -19,13 +20,14 @@ def number(num):
             return f[num // 10 * 10] +' '+f[num %10]
     elif num < thousand:
         if num % 10 ==0:
-            return f[num//100] +" hundred" 
+            return f[num//100] +" hundred " 
         else:
             return f[num//100] + ' hundred and ' + number(num%100)
-    elif num < thousand * 10:
-        if num % 10 == 0:
-            return f[num//1000] + ' thousand'
+    elif num < thousand * 1000:
+        if num % 100 == 0:
+            return number(num//1000) + ' thousand'
         else:
-            return number(num//1000 )+ " thousand and "  + number(num%1000)    
+            return number(num//1000) + ' thousand '+ number(num % 1000)
+   
 ask = int(input("Enter a number :"))    
 print(number(ask))

@@ -154,13 +154,13 @@ def generate_otp():
 
 # This function generates account number after signing up
 def open_account():
-    acc = acc
+    global acc
     form_rows = ["First Name: ","Middle Name: ","Last Name: ","Phone Number: ",
         "Address: ","Account status: ","Land Mark: ","Email"]
     user =""
     form_dic = {}
     for form in form_rows:
-        user = input(form)
+        user = input("\n\t"form)
         form_dic[form]=user
     
     for k,v in form_rows.items():

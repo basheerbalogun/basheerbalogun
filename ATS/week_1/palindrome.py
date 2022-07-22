@@ -2,7 +2,7 @@
 
 def palindrome(num):
     tem=num
-    rev =0
+    rev=0
     while tem > 0:
         r = tem % 10
         rev = rev *10 +r
