@@ -1,40 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="18d39678-6276-43d5-ae2d-3e925480eb71" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/ATS.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/ATS.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week_4/profile_in_oop.py" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/profile_in_oop.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week_4/user.csv" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/user.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/week_4/user_inheritance.py" beforeDir="false" afterPath="$PROJECT_DIR$/week_4/user_inheritance.py" afterDir="false" />
-    </list>
+    <list default="true" id="18d39678-6276-43d5-ae2d-3e925480eb71" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2BFb77nt43peI4kGo06pssiUiZX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "last_opened_file_path": "C:/Users/BasheerOlamilekanBal/Documents/Assignments/ATS/week_7/mysite",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\BasheerOlamilekanBal\Documents\Assignments\ATS\week_4" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\BasheerOlamilekanBal\Documents\Assignments\ATS\week_8\django\blog" />
+      <recent name="C:\Users\BasheerOlamilekanBal\Documents\Assignments\ATS\week_8" />
     </key>
   </component>
   <component name="RunManager" selected="Python.mysite">
