@@ -1,0 +1,54 @@
+{% extends "blog/base.html" %}
+<html>
+<head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+{% block content %}
+  <h1>Title: {{ post.title }}</h1>
+  <img src="{{ post.author.image.url }}" width="700" height="500"><br>
+  <p><strong>Author:</strong> <a href="">{{ post.author }}</a></p><br>
+  <p><strong>Content:</strong> {{ post.content }}</p>
+  <br>
+  <h3>Comments</h3>
+  <br>
+  {% for comment in post.commentpost_set.all %}
+    <ul>
+
+      {% if request.user.id == comment.user.id %}
+          {% if comment.is_hidden }
+            <p>{{ comment.content }}</p>
+            <p>{{ comment.user }}<center>{{comment.timestamp }}</center></p>
+            <p><a href="{% url 'delete' comment.id %}"><input type="submit" value="Delete"></a>
+            <span><a href="{% url 'hide-comment' comment.id %}"><input type="submit" value="Hide"></a></span>
+            <span><a href="{% url 'delete' comment.id %}"><input type="submit" value="Unhide"></a></span>
+            </p>
+            <hr>
+      {% else %}
+        <p>{{ comment.content }}</p>
+        <p>{{ comment.user }}<center>{{comment.timestamp }}</center></p>
+        <hr>
+      {% endif %}
+    </ul>
+  {% endfor %}
+  <h3>Add your comment here</h3>
+
+  {% include 'blog/comment_form.html' %}
+{% endblock content %}
+      <script>
+        $(document).on('submit', '#comment_form', function(e) {
+          e.preventDefault();
+          $.ajax({
+            type: 'POST',
+            url : "{% url 'comment' %}",
+            data: {
+                comment: $('#comment').val(),
+                csrfmiddewaretoken: $('input[name=csrfmiddlewaretoken]').val()
+            },
+          })
+        })
+      </script>
+  </body>
+</html>

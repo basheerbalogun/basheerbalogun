@@ -1,0 +1,24 @@
+{% extends 'blog/base.html'%}
+{% block content %}
+    <h1>Details About : {{ author|capfirst }}</h1><br>
+<p>Posts by: <b>{{ author }}</b> are ({{ author_post_number }}) all together</p><br>
+<img src="{{ author.image.url }}" width="70" height="50" ><br>
+    <br><br>
+    {% for posts in author_articles %}
+        <ul>
+            {% if posts.is_hidden %}
+                <li><a href="{{ request.META.HTTP_REFERER }}">{{posts}}</a> This post is hidden : <span>
+                <input type="checkbox" name="is_hidden">
+                </span><span>{{posts.is_hidden}}</span> </li>
+            {% else %}
+                <li><a href="{{ request.META.HTTP_REFERER }}">{{posts}}</a> You can hide this post : <span>
+                <input type="checkbox" name="is_hidden">
+                </span><span>{{posts.is_hidden}}</span> </li>
+            {% endif %}
+        </ul>
+    {% endfor %}
+    <br>
+
+
+
+{% endblock %}

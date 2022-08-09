@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% block content %}
+  <h1>My Profile Info</h1>
+  <img src="{{ post.author.image.url }}" width="70" height="50"><br>
+  <p><strong>Firstname:</strong>{{ profile.name_ }}</p>
+  <p><strong>Content:</strong> {{ post.content }}</p>
+  <br>
+  {% endfor %}
+  <h3></h3>
+    {% if user.is_authenticated %}
+      <form action="" method="post">
+          {% csrf_token %}
+          {{ form.as_p}}
+        <input type="submit">
+      </form>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+
+   {% if user.is_authenticated %}
+      <form action="{% url 'comment' post.id %}" method="post">
+          {% csrf_token %}
+          {{ form.as_p}}
+        <input type="submit">
+      </form>
+    {% else %}
+        <p>Please login to be able to comment.</p>
+
+    {% endif %}
